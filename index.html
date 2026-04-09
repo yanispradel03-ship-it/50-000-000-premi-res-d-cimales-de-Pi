@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Télécharger π - 50 millions de décimales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #ffe0b2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 50px 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #00796b;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px #b2dfdb;
+        }
+
+        p.description {
+            font-size: 1.5em;
+            color: #004d40;
+            margin-bottom: 30px;
+        }
+
+        .preview {
+            width: 90%;
+            max-width: 800px;
+            max-height: 220px;
+            overflow-y: scroll;
+            background-color: rgba(255,255,255,0.85);
+            border-left: 5px solid #00796b;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 40px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 16px;
+            line-height: 1.4em;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .preview span {
+            color: #d32f2f; /* couleur pour les chiffres “importants” */
+        }
+
+        a.download-btn {
+            text-decoration: none;
+        }
+
+        button {
+            padding: 20px 45px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            background: linear-gradient(135deg, #388e3c, #66bb6a);
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 14px;
+            color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Les décimales de π</h1>
+    <p class="description">Fichier complet : 50 millions de décimales</p>
+
+    <div class="preview">
+        3.<span>1415926535</span> 8979323846 2643383279 5028841971 6939937510 5820974944 5923078164 0628620899 8628034825 3421170679...
+    </div>
+
+    <a class="download-btn" href="https://www.dropbox.com/scl/fi/cd1ngr956ef11vg3gkyhe/pi_final.txt?rlkey=zhsxj2pxe51z68hd4y53uqa0q&dl=1" download>
+        <button>Télécharger π</button>
+    </a>
+
+    <footer>
+        Partagez ce fichier librement. Généré avec Python & gmpy2.
+    </footer>
+
+</body>
+</html>
